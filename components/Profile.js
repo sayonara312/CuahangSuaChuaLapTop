@@ -26,10 +26,10 @@ export default class Profile extends React.Component {
         style={styles.image}>
         <View style={styles.container}>
            <TouchableOpacity style={styles.btnIcon}
-                       onPress={() => {this.props.navigation.navigate('Main')}}>
-                       <ImageBackground
-                         style={styles.icon}
-                         source={require('../assets/Back.png')}></ImageBackground>
+              onPress={() => {this.props.navigation.navigate('Main')}}>
+               <ImageBackground
+                style={styles.icon}
+                source={require('../assets/Back.png')}></ImageBackground>
            </TouchableOpacity>
           <Text style={styles.txtUser}>Trọng Phan</Text>
           <Text style={styles.txtDiaChi}>
@@ -93,7 +93,10 @@ export default class Profile extends React.Component {
             <Text style={styles.txtContent2}> Thay đổi mật khẩu</Text>
           </View>
           <View style={styles.contentfooter}>
-            <Text style={styles.txtcontentfooter}> Đăng xuất</Text>
+            <TouchableOpacity
+               onPress={() => {this.props.navigation.navigate('SignIn')}}>
+             <Text style={styles.txtcontentfooter}> Đăng xuất</Text>
+             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.footer}>
@@ -245,4 +248,11 @@ const styles = StyleSheet.create({
     marginLeft:10,
     fontWeight: 'bold',
   },
+    btnBack:{
+   fontSize: 30,
+       color: 'white',
+       fontWeight: '700',
+       marginBottom: 130,
+       marginTop: 25,
+       paddingRight:100}
 });
