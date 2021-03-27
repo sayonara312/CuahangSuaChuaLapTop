@@ -22,19 +22,89 @@ export default class QLNhanVien extends React.Component {
   render() {
     return (
       <ImageBackground
-
         source={require('../assets/background2.png')}
         style={styles.image}>
-
         <View style={styles.container}>
-
-          <TouchableOpacity style={styles.btnIcon} >
+          <TouchableOpacity style={styles.btnIcon}
+          onPress={() => {this.props.navigation.navigate('Main')}}>
             <ImageBackground
               style={styles.icon}
               source={require('../assets/Back.png')}></ImageBackground>
           </TouchableOpacity>
-           <Text styles={styles.txtHoTen}>Bình Võ</Text>
+          <Text style={styles.txtUser}>Trọng Phan</Text>
+          <Text style={styles.txtDiaChi}>
+            <ImageBackground
+              style={styles.iconDiaChi}
+              source={require('../assets/location-sign.png')}>
+            </ImageBackground>
+            Los Angeles, California</Text>
+        </View>
+        <View style={styles.content}>
+          <View style={styles.contenthead}>
+            <Text style={styles.txtcontenthead}> Thông tin tài khoản</Text>
           </View>
+          <View style={styles.contentmid}>
+            <View style={styles.txtTT}>
+              <Text style={styles.txtContent2}> Tên tài khoản</Text>
+              <Text style={styles.txtContent2}> Email</Text>
+              <Text style={styles.txtContent2}> S61 điện thoại</Text>
+              <Text style={styles.txtContent2}> Địa Chỉ</Text>
+            </View>
+
+            <View>
+              <View  style={styles.content2}>
+
+                <Text style={styles.txtContent2Change}>Trọng Phan</Text>
+                <ImageBackground
+                  style={styles.iconNext}
+                  source={require('../assets/Next.png')}>
+                </ImageBackground>
+
+              </View>
+              <View  style={styles.content2}>
+
+                <Text style={styles.txtContent2Change}>trongdeptrai@mail.com</Text>
+                <ImageBackground
+                  style={styles.iconNext}
+                  source={require('../assets/Next.png')}>
+                </ImageBackground>
+              </View>
+              <View  style={styles.content2}>
+
+              <Text style={styles.txtContent2Change}>+12348746348</Text>
+                <ImageBackground
+                  style={styles.iconNext}
+                  source={require('../assets/Next.png')}>
+                </ImageBackground>
+              </View>
+              <View  style={styles.content2}>
+
+               <Text style={styles.txtContent2Change}>1827,Phường Tân Định..</Text>
+                <ImageBackground
+                  style={styles.iconNext}
+                  source={require('../assets/Next.png')}>
+                </ImageBackground>
+              </View>
+            </View>
+
+          </View>
+
+          <View>
+            <Text style={styles.txtContent2}> Thay đổi mật khẩu</Text>
+          </View>
+          <View style={styles.contentfooter}>
+            <Text style={styles.txtcontentfooter}> Đăng xuất</Text>
+          </View>
+        </View>
+        <View style={styles.footer}>
+          <TouchableOpacity
+              style={styles.btnlogin}
+              onPress={() => {
+                  this.props.navigation.navigate('');
+              }}>
+              <Text style={styles.txtdn}>Cập nhật</Text>
+          </TouchableOpacity>
+        </View>
       </ImageBackground>
 
     );
@@ -61,20 +131,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
 
   },
-  header: {
-        backgroundColor: '#BED0EC',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height:60,
-        width:'80%',
-        marginTop:9
-      },
-      headerText:{
-        color: '#002D69',
-        fontSize: 20,
-        fontWeight: 'bold',
-        paddingRight:185
-      },
+  content:{
+    marginBottom:380,
+  },
   image: {
     flex: 1,
   },
@@ -85,27 +144,31 @@ const styles = StyleSheet.create({
     marginVertical: -5,
     right:200,
   },
+
   btnIcon: {
     paddingTop:20,
     width: 30,
     height: 40,
     marginTop:3,
   },
-
-  txtHoTen: {
+  txtUser:{
     fontSize: 30,
     color: 'white',
     fontWeight: '700',
-    marginBottom: 130,
     marginTop: 25,
-    paddingRight:100
+    marginLeft:5,
   },
-  btnHoTen:{
-    backgroundColor: 'white',
-    width: '80%',
-    marginTop: -0,
-    marginBottom: -10,
-    height: 59,
+  iconDiaChi:{
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    marginRight:8,
+    marginTop: 10,
+  },
+  txtDiaChi:{
+    fontSize: 18,
+    color: 'white',
+
   },
   txtContent: {
     color: '#002D69',
@@ -115,20 +178,71 @@ const styles = StyleSheet.create({
     margin: 19,
 
   },
-  Add:{
-    position: 'absolute',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#BED0EC',
-    padding: 1,
-    top: 225,
-    right:50,
-    height: 55,
-    width:'20%'
+  content2:{
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    marginBottom:20,
   },
-  AddText:{
-    color: '#002D69',
-    fontSize: 30,
-    fontWeight:'bold'
-  }
+  txtTT:{
+    justifyContent: 'flex-start',
+  },
+  content3:{
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    marginBottom:300,
+  },
+  contentmid:{
+    flexDirection: 'row',
+  },
+  txtContent2:{
+    fontSize: 18,
+    color: 'white',
+    marginRight:100,
+    marginBottom:25,
+    marginLeft:10,
+  },
+  txtContent2Change:{
+    fontSize: 18,
+    color: 'white',
+    marginRight:5,
+
+  },
+  iconNext:{
+    width: 30,
+    height: 30,
+  },
+  contenthead:{
+    marginTop:50,
+    marginBottom:50,
+  },
+  txtcontenthead:{
+    fontSize: 20,
+    color: 'white',
+    marginLeft:10,
+    fontWeight: 'bold',
+
+  },
+  btnlogin: {
+    backgroundColor: '#0269FC',
+    borderRadius: 5,
+    width: '90%',
+    marginBottom: 20,
+    marginLeft: 20,
+    height: 52,
+
+  },
+  txtdn: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlignVertical: 'center',
+    margin: 14,
+  },
+  txtcontentfooter:{
+    fontSize: 20,
+    color: 'white',
+    marginLeft:10,
+    fontWeight: 'bold',
+  },
 });
