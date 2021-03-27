@@ -26,11 +26,14 @@ export default class ChamCong extends React.Component {
         source={require('../assets/background2.png')}
         style={styles.image}>
         <View style={styles.container}>
-          <Text style={styles.txtChamcong}> <TouchableOpacity style={styles.btnIcon} >
+          <Text style={styles.txtChamcong}> <TouchableOpacity style={styles.btnIcon}
+          onPress={() => {this.props.navigation.navigate('Main')}}>
             <ImageBackground
               style={styles.icon}
               source={require('../assets/Back.png')}></ImageBackground>
-          </TouchableOpacity>Quản lý chấm công</Text>
+          </TouchableOpacity> <ImageBackground
+              style={styles.iconCCong}
+              source={require('../assets/calculator1.png')}></ImageBackground> Quản lý chấm công</Text>
           <View style={styles.header}>
           <Text style={styles.headerText}>Chấm công</Text>
         </View>
@@ -88,36 +91,43 @@ const styles = StyleSheet.create({
         color: '#002D69',
         fontSize: 24,
         fontWeight: 'bold',
-        paddingRight:135
+        paddingRight:250
       },
   image: {
     flex: 1,
   },
   icon: {
-    width: 30,
-    height: 30,
-    alignSelf: 'center',
+    width: 40,
+    height: 40,
     marginVertical: -5,
+    marginLeft:3,
+  },
+  iconCCong:{
+    width: 40,
+    height: 40,
+    alignSelf: 'center',
+    marginVertical: 0,
+
   },
   btnIcon: {
-    paddingTop:20,
+    paddingTop:10,
     width: 30,
     height: 40,
     marginTop:3,
   },
   btnIconDel:{
-    marginTop:-34,
-    paddingLeft:225,
-    marginBottom: -10,
+    paddingLeft:300,
+    top:-35,
     height: 59,
   },
   txtChamcong: {
     fontSize: 30,
     color: 'white',
-    fontWeight: '700',
-    marginBottom: 120,
+    marginBottom: 130,
     marginTop: 25,
-    paddingRight:50
+    paddingRight:100,
+    marginLeft:1,
+    fontWeight: '700',
   },
   btnDate:{
     backgroundColor: 'white',
@@ -140,9 +150,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#BED0EC',
     padding: 1,
-    top: 205,
-    right:37,
-    height: 60,
+    top: 218,
+    right:50,
+    height: 55,
     width:'20%'
   },
   AddText:{

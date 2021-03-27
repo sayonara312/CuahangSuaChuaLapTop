@@ -18,14 +18,16 @@ export default class CaiDat extends React.Component {
         source={require('../assets/background2.png')}
         style={styles.image}>
         <View style={styles.container}>
-          <Text style={styles.txtCaiDat}> <TouchableOpacity style={styles.btnIcon} >
+          <Text style={styles.txtCaiDat}> <TouchableOpacity style={styles.btnIcon}
+                       onPress={() => {this.props.navigation.navigate('Main')}}>
             <ImageBackground
               style={styles.icon}
               source={require('../assets/Back.png')}></ImageBackground>
-          </TouchableOpacity>Cài đặt</Text>
-          <TouchableOpacity style={styles.btnCaidat} onPress={() => {
-                  this.props.navigation.navigate('');
-                }}>
+          </TouchableOpacity>
+           <ImageBackground
+              style={styles.iconCD}
+              source={require('../assets/settings1.png')}></ImageBackground> Cài đặt</Text>
+          <TouchableOpacity style={styles.btnCaidat} >
             <Text style={styles.txtContent} >Ngôn ngữ</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnCaidat} >
@@ -39,6 +41,9 @@ export default class CaiDat extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnCaidat} >
             <Text style={styles.txtContent}>Cập nhật phiên bản</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btnCaidat} >
+            <Text style={styles.txtContent}>Donate</Text>
           </TouchableOpacity>
           </View>
       </ImageBackground>
@@ -58,27 +63,33 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   icon: {
-    width: 30,
-    height: 30,
-    alignSelf: 'center',
-    marginVertical: -5,
+    width: 45,
+    height: 40,
+    marginVertical: -2,
   },
   btnIcon: {
-    paddingTop:20,
+    paddingTop:10,
     width: 30,
     height: 40,
     marginTop:3,
     color: 'rgba(255, 254, 254, 0.8)',
+    marginLeft:-30
   },
   txtCaiDat: {
     fontSize: 30,
     color: 'white',
-    fontWeight: '700',
-    marginBottom: 50,
+    marginBottom: 130,
     marginTop: 25,
-    paddingRight:200
+    paddingRight:250,
+    fontWeight: '700',
   },
-
+  iconCD:{
+    width: 30,
+    height: 30,
+    alignSelf: 'center',
+    marginVertical: -2,
+    marginLeft:-15
+  },
   btnCaidat: {
     backgroundColor: '#BED0EC',
     borderRadius: 4,
@@ -91,9 +102,8 @@ const styles = StyleSheet.create({
   txtContent: {
     color: '#002D69',
     fontSize: 16,
-    fontWeight: 'bold',
     textAlignVertical: 'center',
     margin: 14,
-
+    fontWeight: '700',
   },
 });

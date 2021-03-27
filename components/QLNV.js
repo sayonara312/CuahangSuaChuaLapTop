@@ -28,7 +28,8 @@ export default class QLNhanVien extends React.Component {
 
         <View style={styles.container}>
           <Text style={styles.txtNhanVien}>
-          <TouchableOpacity style={styles.btnIcon} >
+          <TouchableOpacity style={styles.btnIcon}
+            onPress={() => {this.props.navigation.navigate('Main')}}>
             <ImageBackground
               style={styles.icon}
               source={require('../assets/Back.png')}></ImageBackground>
@@ -118,16 +119,17 @@ const styles = StyleSheet.create({
     marginTop:3,
   },
   iconNV: {
-      width: 30,
-      height: 27,
+      top:10,
+      width: 45,
+      height: 35,
       alignSelf: 'center',
       marginVertical: -5,
 
     },
     btnIconNV: {
       paddingTop:20,
-      width: 30,
-      height: 40,
+      width: 50,
+      height: 50,
       marginTop:3,
     },
   btnIconDel:{
@@ -137,12 +139,12 @@ const styles = StyleSheet.create({
     height: 59,
   },
   txtNhanVien: {
-    fontSize: 20,
+    fontSize: 30,
     color: 'white',
     fontWeight: '700',
-    marginBottom: 50,
+    marginBottom: 130,
     marginTop: 25,
-    paddingRight:110
+    paddingRight:100
   },
   btnNhanVien:{
     backgroundColor: 'white',
@@ -165,8 +167,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#BED0EC',
     padding: 1,
-    top: 130,
-    right:37,
+    top: 225,
+    right:50,
     height: 55,
     width:'20%'
   },

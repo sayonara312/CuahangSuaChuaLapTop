@@ -27,11 +27,14 @@ export default class DoiTac extends React.Component {
         style={styles.image}>
 
         <View style={styles.container}>
-          <Text style={styles.txtDoiTac}> <TouchableOpacity style={styles.btnIcon} >
+          <Text style={styles.txtDoiTac}> <TouchableOpacity style={styles.btnIcon}
+          onPress={() => {this.props.navigation.navigate('Main')}}>
             <ImageBackground
               style={styles.icon}
               source={require('../assets/Back.png')}></ImageBackground>
-          </TouchableOpacity>Quản lý đối tác</Text>
+          </TouchableOpacity> <ImageBackground
+              style={styles.iconDT}
+              source={require('../assets/contract1.png')}></ImageBackground> Quản lý đối tác</Text>
 
 
 
@@ -92,7 +95,7 @@ const styles = StyleSheet.create({
         color: '#002D69',
         fontSize: 24,
         fontWeight: 'bold',
-        paddingRight:185
+        paddingRight:280
       },
   image: {
     flex: 1,
@@ -102,11 +105,20 @@ const styles = StyleSheet.create({
     height: 30,
     alignSelf: 'center',
     marginVertical: -5,
+    marginLeft:15
+  },
+  iconDT:{
+    width: 40,
+    height: 40,
+    alignSelf: 'center',
+    marginVertical: 0,
+    marginLeft:-6,
+
   },
   btnIcon: {
     paddingTop:20,
-    width: 30,
-    height: 40,
+    width: 45,
+    height: 45,
     marginTop:3,
   },
   btnIconDel:{
@@ -116,17 +128,17 @@ const styles = StyleSheet.create({
     height: 59,
   },
   txtDoiTac: {
-    fontSize: 30,
-    color: 'white',
-    fontWeight: '700',
-    marginBottom: 120,
-    marginTop: 25,
-    paddingRight:110
+   fontSize: 30,
+   color: 'white',
+   fontWeight: '700',
+   marginBottom: 130,
+   marginTop: 25,
+   paddingRight:100
   },
   btnDoiTac:{
     backgroundColor: 'white',
     width: '80%',
-    marginTop: -0,
+    marginTop: 0,
     marginBottom: -10,
     height: 59,
   },
@@ -144,13 +156,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#BED0EC',
     padding: 1,
-    top: 205,
-    right:37,
-    height: 59,
+    top: 220,
+    right:50,
+    height: 55,
     width:'20%'
   },
   AddText:{
-    color: 'white',
+    color: '#002D69',
     fontSize: 30,
     fontWeight:'bold'
   }
