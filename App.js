@@ -16,10 +16,7 @@ import ForgotPassword from './components/FogotPassword';
 import QLSP from './components/QLSP';
 const AppNavigator = createStackNavigator(
   {SignIn,SignUp,CaiDat,ChamCong,DoiTac,Main,QLHD,QLNV,Profile,ChangeNewPassword,ForgotPassword,QLSP},
-  { headerMode: 'none' },
-  {
-      initialRouteName: QLSP,
-    }
+  { headerMode: 'none' }
 );
 const AppContainer = createAppContainer(AppNavigator);
 export default class App extends React.Component {

@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export default class QLNhanVien extends React.Component {
+export default class Profile extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -25,12 +25,12 @@ export default class QLNhanVien extends React.Component {
         source={require('../assets/background2.png')}
         style={styles.image}>
         <View style={styles.container}>
-          <TouchableOpacity style={styles.btnIcon}
-          onPress={() => {this.props.navigation.navigate('Main')}}>
-            <ImageBackground
-              style={styles.icon}
-              source={require('../assets/Back.png')}></ImageBackground>
-          </TouchableOpacity>
+           <TouchableOpacity style={styles.btnIcon}
+                       onPress={() => {this.props.navigation.navigate('Main')}}>
+                       <ImageBackground
+                         style={styles.icon}
+                         source={require('../assets/Back.png')}></ImageBackground>
+           </TouchableOpacity>
           <Text style={styles.txtUser}>Trọng Phan</Text>
           <Text style={styles.txtDiaChi}>
             <ImageBackground
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   icon: {
-    width: 30,
+    width: 45,
     height: 30,
     alignSelf: 'center',
     marginVertical: -5,
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
 
   btnIcon: {
     paddingTop:20,
-    width: 30,
+    width: 45,
     height: 40,
     marginTop:3,
   },

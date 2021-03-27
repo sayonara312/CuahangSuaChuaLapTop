@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0269FC',
     borderRadius: 5,
     width: '90%',
-    marginTop: 200,
+    marginTop: 300,
     marginBottom: 5,
     marginLeft: 20,
     height: 52,
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '700',
     marginBottom: 120,
-    marginTop: 25,
+    marginTop: 5,
   },
   btnIcon: {
     paddingTop:20,
