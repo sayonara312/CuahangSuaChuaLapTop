@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     },
   btnIconDel:{
     marginTop:-31,
-    paddingLeft:225,
+    paddingLeft:290,
     marginBottom: -10,
     height: 59,
   },
