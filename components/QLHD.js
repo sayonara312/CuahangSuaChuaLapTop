@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   textInput: {
     height: 54,
     width: '90%',
-    marginTop: 8,
+    marginTop:-20,
     paddingLeft: 10,
     borderColor: '#00A2C3',
     color: '#D2D2D2',
@@ -121,8 +121,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#4C82C7',
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 5,
+    marginBottom: 10,
   },
   textHD:{
     fontSize: 18,
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#0269FC',
     borderRadius: 5,
     width: '90%',
-    marginTop: 300,
+    marginTop: 350,
     marginBottom: 5,
     marginLeft: 20,
     height: 52,
