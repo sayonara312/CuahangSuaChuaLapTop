@@ -8,7 +8,7 @@ import ChamCong from './components/ChamCong';
 import QLNV from './components/QLNV';
 import Profile from './components/Profile';
 import QLHD from './components/QLHD';
-import SignIn from './components/SignIn';
+import SignIn from './components/Signin';
 import SignUp from './components/SignUp';
 import Main from './components/Main';
 import ChangeNewPassword from './components/ChangeNewPassword';
