@@ -25,12 +25,17 @@ export default class Profile extends React.Component {
         source={require('../assets/background2.png')}
         style={styles.image}>
         <View style={styles.container}>
+
+        <ImageBackground
+         style={styles.icon }
+                        source={require('../assets/Back.png')}>
            <TouchableOpacity style={styles.btnIcon}
               onPress={() => {this.props.navigation.navigate('Main')}}>
-               <ImageBackground
-                style={styles.icon}
-                source={require('../assets/Back.png')}></ImageBackground>
+
+
            </TouchableOpacity>
+           </ImageBackground>
+
           <Text style={styles.txtUser}>Trọng Phan</Text>
           <Text style={styles.txtDiaChi}>
             <ImageBackground
@@ -146,6 +151,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginVertical: -5,
     right:200,
+
   },
 
   btnIcon: {
