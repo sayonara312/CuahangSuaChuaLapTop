@@ -47,7 +47,7 @@ export default class Profile extends React.Component {
             <View style={styles.txtTT}>
               <Text style={styles.txtContent2}> Tên tài khoản</Text>
               <Text style={styles.txtContent2}> Email</Text>
-              <Text style={styles.txtContent2}> S61 điện thoại</Text>
+              <Text style={styles.txtContent2}> Số điện thoại</Text>
               <Text style={styles.txtContent2}> Địa Chỉ</Text>
             </View>
 
